@@ -1,0 +1,7 @@
+com\example\weather_app\controller\model\WeatherResponse$Main.class
+com\example\weather_app\controller\WeatherController.class
+com\example\weather_app\WeatherAppApplication.class
+com\example\weather_app\controller\model\WeatherResponse.class
+com\example\weather_app\controller\model\WeatherResponse$Sys.class
+com\example\weather_app\controller\model\WeatherResponse$Weather.class
+com\example\weather_app\controller\model\WeatherResponse$Wind.class
