@@ -1,0 +1,70 @@
+************************************************************************Project Report: Weather Application************************************************************************8
+
+This document provides a high-level overview of the Spring Boot-based weather application.
+
+Project Structure
+The repository is organized as a monolithic web application. The backend logic and frontend user interface are both contained within a single Spring Boot project.
+
+src/main/java: Contains the Java-based backend logic (controllers and application entry point).
+
+src/main/resources: Contains the frontend UI (HTML/CSS), templates, and the application configuration.
+
+Backend Details (src/main/java)
+The backend is responsible for handling user requests, fetching data from the external weather API, and serving the web pages.
+
+Language: Java 21 (as seen in your logs)
+
+Core Framework: Spring Boot 3.3.1
+
+Build Tool: Apache Maven
+
+Primary Responsibilities:
+
+Serving the static HTML/CSS pages to the user.
+
+Handling the form submission (POST request) with the city name.
+
+Sending an HTTP request to the OpenWeatherMap API.
+
+Parsing the incoming JSON response to extract weather data.
+
+Passing the data model to the frontend (Thymeleaf) for rendering.
+
+Key Libraries & Dependencies:
+
+Spring Web: For creating REST controllers and running the embedded Apache Tomcat server.
+
+Spring Boot Starter Thymeleaf: A server-side template engine to dynamically insert Java data into the HTML.
+
+Spring Boot DevTools: For automatic application restarts and live reloads during development.
+
+RestTemplate (or WebClient): Used to make the external API call to OpenWeatherMap.
+
+Frontend Details (src/main/resources)
+The frontend provides the user interface for searching for weather and displaying the results.
+
+Core Technologies: HTML5, CSS3
+
+Template Engine: Thymeleaf
+
+Primary Responsibilities:
+
+Displaying the initial search page (index.html).
+
+Sending the city name to the backend via an HTML <form>.
+
+Displaying the results page (weather.html).
+
+Using Thymeleaf expressions (e.g., th:text="${temperature}") to dynamically show the weather data received from the backend.
+
+Key Files:
+
+/templates/index.html: The home page with the city search form.
+
+/templates/weather.html: The template used to display the weather results card.
+
+/static/css/: Contains the stylesheets for the application's appearance.
+
+/static/images/: Contains icons (like the sun) used in the weather card.
+
+application.properties: The configuration file that stores the secret API key for OpenWeatherMap.
